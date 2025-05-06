@@ -503,7 +503,7 @@ for train_index, test_index in kf.split(X_sample):
 
 roc_score = roc_auc_score(final_labels_all, final_preds_all)
 fpr, tpr, thresholdss = roc_curve(final_labels_all, final_preds_all)
-plt.plot(fpr, tpr, '#9370DB', label=f'Mean AUC: 0.95711', lw=2)
+plt.plot(fpr, tpr, '#9370DB', label=f'Mean AUC: {roc_score:.5f}', lw=2)
 plt.plot([0, 1], [0, 1], linestyle='--', color='gray', lw=2)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
